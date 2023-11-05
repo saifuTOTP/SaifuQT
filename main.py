@@ -72,6 +72,8 @@ update_timer = QtCore.QTimer()
 
 update_thread = threading.Thread(target=updateLoop, daemon=True)
 
+
+
 def clear_widgets():
     for widget in widgets:
         if widgets[widget] != []:
@@ -207,8 +209,9 @@ def frame1():
     )
 
     widgets["button"].append(button)
+    widgets["buttonTwo"].append(buttonTwo)
     grid.addWidget(widgets["button"][-1], 40, 0)
-    grid.addWidget(buttonTwo, 0, 0)
+    grid.addWidget(widgets["buttonTwo"][-1], 0, 0)
     button.clicked.connect(newOTP)
     buttonTwo.clicked.connect(newAcc)
 
@@ -365,6 +368,12 @@ def frame4():
     grid.addWidget(NoBox, 1, 0)
     YesBox.clicked.connect(YesEvent)
     NoBox.clicked.connect(NoEvent)
+frame1()
+frame3()
+CancelEvent()
+frame1()
+
+
 
 def refresh_frame1():
     global boolLock1
@@ -386,7 +395,7 @@ api_timer.start(2000)
 
 update_thread.start()
 
-frame1()
+
 #newCode()
 window.setLayout(grid)
 window.show()
