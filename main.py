@@ -1,7 +1,7 @@
 import sys, pyotp, time, re
-from PyQt5.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QWidget, QFileDialog, QGridLayout
-from PyQt5 import QtGui, QtCore, QtWidgets
-from PyQt5.QtGui import QIcon
+from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QWidget, QFileDialog, QGridLayout
+from PySide6 import QtGui, QtCore, QtWidgets
+from PySide6.QtGui import QIcon
 from functools import partial
 import requests
 import threading
