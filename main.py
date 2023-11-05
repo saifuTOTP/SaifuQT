@@ -32,7 +32,7 @@ window = QWidget()
 window.setWindowTitle("Who wants to be a programmer???")
 window.setFixedWidth(1080)
 window.setFixedHeight(2400)
-window.move(3700, 100)
+#window.move(3700, 100)
 window.setStyleSheet("background: #1e1e2e;")
 
 grid = QGridLayout()
